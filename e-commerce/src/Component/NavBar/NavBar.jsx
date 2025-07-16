@@ -1,11 +1,13 @@
 import React from "react";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoSearchSharp } from "react-icons/io5";
+import { NavLink, useNavigate } from "react-router";
 
 const NavBar = () => {
+  const navigate = useNavigate();
   return (
     <div className=" text-xl text-white font-medium flex justify-between w-full h-fit py-3 items-center px-20">
-      <div>
+      <div onClick={() => navigate("/")}>
         <img src="./logo.png" alt="" className="h-16 w-16" />
       </div>
       <div className="border flex gap-6">
@@ -13,9 +15,9 @@ const NavBar = () => {
           <input type="text" placeholder="Search" className="outline-none" />
           <IoSearchSharp className="text-gray-700" />
         </div>
-        <div>
+        <NavLink to={"/cart"}>
           <MdOutlineShoppingCart className="text-4xl text-gray-600" />
-        </div>
+        </NavLink>
       </div>
     </div>
   );
