@@ -15,7 +15,7 @@ const Product = () => {
         Product
       </div>
 
-      <div className="my-8 flex flex-wrap gap-5">
+      <div className="my-8 flex flex-wrap gap-8 justify-center">
         {productData.map((item) => (
           <ProductCard data={item} key={item.id} />
         ))}

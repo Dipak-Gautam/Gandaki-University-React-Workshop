@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="flex-1">
       <NavBar />
-      <div className="mx-20">
+      <div className=" mx-4 md:mx-20">
         <HeroSection />
         <Product />
       </div>
